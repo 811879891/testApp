@@ -10,6 +10,6 @@
     "navigationBarTitleText": "制造冲突",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "style": "v1",
   "sitemapLocation": "sitemap.json"
 }
