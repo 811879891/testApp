@@ -7,7 +7,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "制造冲突",
+    "navigationBarTitleText": "冲突",
     "navigationBarTextStyle": "black"
   },
   "style": "v1",
