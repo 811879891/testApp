@@ -1,8 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/testAddPage/testAddPage"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,6 +9,6 @@
     "navigationBarTitleText": "嘿嘿嘿",
     "navigationBarTextStyle": "black"
   },
-  "style": "v1",
+  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
