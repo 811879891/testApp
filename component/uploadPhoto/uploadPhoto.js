@@ -43,37 +43,38 @@ Component({
         current: imgs[index],
         urls: imgs
       })
+    },
+    loadImg: function () {
+      console.log("文件上传。。。。。。。。。");
+      var that = this;
+      wx.uploadFile({
+        url: "https://localhost:8080/upload/upload",
+        filePath: that.data.imgPath[0],
+        name: "upload_file",
+        // 请求携带的额外form data
+        /*formData: {
+          "id": id
+        },*/
+        header: {
+          'Content-Type': "multipart/form-data"
+        },
+        success: function (res) {
+          wx.showToast({
+            title: "图像上传成功！",
+            icon: "",
+            duration: 1500,
+            mask: true
+          });
+        },
+        fail: function (res) {
+          wx.showToast({
+            title: "上传失败，请检查网络或稍后重试。",
+            icon: "none",
+            duration: 1500,
+            mask: true
+          });
+        }
+      })
     }
   },
-  loadImg: function () {
-    var that = this;
-    wx.uploadFile({
-      url: "http://localhost:8080/upload/upload",
-      filePath: that.data.imgPath,
-      name: "upload_file",
-      // 请求携带的额外form data
-      /*formData: {
-        "id": id
-      },*/
-      header: {
-        'Content-Type': "multipart/form-data"
-      },
-      success: function (res) {
-        wx.showToast({
-          title: "图像上传成功！",
-          icon: "",
-          duration: 1500,
-          mask: true
-        });
-      },
-      fail: function (res) {
-        wx.showToast({
-          title: "上传失败，请检查网络或稍后重试。",
-          icon: "none",
-          duration: 1500,
-          mask: true
-        });
-      }
-    })
-  }
 })

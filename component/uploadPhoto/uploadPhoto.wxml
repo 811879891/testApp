@@ -1,5 +1,5 @@
 <view class="container">
-<block wx:for="{{imgPath}}" wx:for-index="index" wx:for-item="path">
+<block wx:for="{{imgPath}}" wx:for-index="index" wx:for-item="path" wx:key="name">
   <image class="image" src="{{path}}" data-index="{{index}}" mode='scaleToFill' bindtap="previewImg"></image>
 </block>
 <button bindtap="selectImg">选择图片</button>
