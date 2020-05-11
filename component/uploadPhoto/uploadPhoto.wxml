@@ -1,7 +1,10 @@
 <view class="container">
 <block wx:for="{{imgPath}}" wx:for-index="index" wx:for-item="path" wx:key="name">
-  <image class="image" src="{{path}}" data-index="{{index}}" mode='scaleToFill' bindtap="previewImg"></image>
+  <view style="width:320px;height:240px;border:1px solid black;position: relative">
+    <view class="quan" style="width:40rpx;height:40rpx;border:1px solid red;border-radius:20rpx;" bindtap="deleteImg" data-index="{{index}}"></view>
+    <image class="image" src="{{path}}" data-index="{{index}}" mode='scaleToFill' bindtap="previewImg"></image>
+  </view>
 </block>
+</view>
 <button bindtap="selectImg">选择图片</button>
 <button bindtap="loadImg">上传图片</button>
-</view>
